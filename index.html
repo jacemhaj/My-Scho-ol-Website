@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8" />
+<title>صفحة الدخول</title>
+<style>
+  body {font-family: Arial; direction: rtl; background: #f0f0f0; padding: 50px;}
+  #loginBox {
+    background: white; padding: 20px; border-radius: 10px;
+    max-width: 300px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  input { width: 100%; padding: 10px; margin: 10px 0; }
+  button {width: 100%; padding: 10px; background: #2980b9; color: white; border: none; border-radius: 5px;}
+  button:hover {background: #3498db;}
+  .error {color: red; display: none;}
+</style>
+</head>
+<body>
+
+<div id="loginBox">
+  <h2>تسجيل الدخول</h2>
+  <input type="text" id="username" placeholder="اسم المستخدم" />
+  <input type="password" id="password" placeholder="كلمة المرور" />
+  <button onclick="login()">دخول</button>
+  <p class="error" id="errorMsg">خطأ في اسم المستخدم أو كلمة المرور</p>
+</div>
+
+<script>
+  function login() {
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+
+    if(user === 'admin' && pass === '1234') {
+      window.location.href = 'home.html';
+    } else {
+      document.getElementById('errorMsg').style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
