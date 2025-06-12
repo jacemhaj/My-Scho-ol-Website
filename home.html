@@ -1,31 +1,46 @@
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-<meta charset="UTF-8" />
-<title>الصفحة الرئيسية</title>
-<style>
-  body {font-family: Arial; direction: rtl; background: #fff; padding: 20px;}
-  h1 {color: #2c3e50; text-align: center;}
-  ul {list-style: none; padding: 0; max-width: 400px; margin: auto;}
-  li {
-    background: #3498db; color: white; padding: 15px;
-    margin: 10px 0; border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    font-size: 18px;
-  }
-  li:hover {
-    background: #2980b9;
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>الصفحة الرئيسية</title>
+  <style>
+    body {
+      background-color: #fefce8;
+      font-family: 'Arial', sans-serif;
+      direction: rtl;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 40px;
+      color: #0f172a;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    a {
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-
-<h1>مرحباً بك في موقع الدروس</h1>
-<ul>
-  <li onclick="location.href='science.html'">شعبة علوم</li>
-  <li onclick="location.href='math.html'">شعبة رياضيات</li>
-</ul>
-
+  <h1>اختَر شُعبتك</h1>
+  <div class="grid">
+    <div class="card"><a href="science.html">رابعة علوم</a></div>
+    <div class="card"><a href="literature.html">رابعة آداب</a></div>
+    <div class="card"><a href="tech.html">رابعة تقنية</a></div>
+    <div class="card"><a href="economy.html">رابعة اقتصاد</a></div>
+  </div>
 </body>
 </html>
